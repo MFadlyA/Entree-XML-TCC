@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  height: 100vh !important;
+  overflow: hidden !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav_main_wrapper {
+  display: block;
+  width: 100%;
+}
+
+.nav_main_wrapper .btn {
+  width: 200px; /* Lebar tombol tetap pada layar besar */
+  text-align: center;
+  margin-left: 10px;
+}
+
+.nav_main_wrapper .btn {
+  width: 200px; /* Lebar tombol tetap pada layar besar */
+  text-align: center;
+  margin-left: 10px;
+}
+
+.nav_main_wrapper {
+  display: block;
+  width: 100%;
+}
+
+.nav_main_wrapper .btn-tambah {
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+.nav_main_wrapper .btn-tambah {
+  min-width: 250px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+  .nav_main_wrapper {
+    width: 100%;
+  }
+
+  .nav_main_wrapper .d-flex,
+  .nav_main_wrapper .dropdown,
+  .nav_main_wrapper .btn-tambah {
+    margin: 0;
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
+}
+
+.btn-aksi-mahasiswa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-aksi-mahasiswa .btn {
+  font-size: 16px;
+}

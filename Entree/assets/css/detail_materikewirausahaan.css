@@ -1,0 +1,88 @@
+/* Gaya untuk layout kiri dan kanan */
+.horizontal-layout {
+  display: flex;
+  flex-direction: row; /* Susun elemen secara horizontal */
+  gap: 20px; /* Jarak antar elemen kiri dan kanan */
+  margin: 20px 0; /* Spasi di atas dan bawah layout */
+}
+
+.layout-left {
+  flex: 1; /* Bagian kiri menggunakan 1 bagian dari lebar */
+  overflow: hidden; /* Potong konten yang terlalu panjang */
+}
+
+.layout-right {
+  flex: 1; /* Bagian kanan menggunakan 2 bagian dari lebar */
+  overflow: hidden; /* Potong konten yang terlalu panjang */
+  max-height: 1000px;
+  overflow: auto;
+}
+
+.card {
+  height: 300px !important;
+}
+
+/* .file-preview{
+    width: 70%;
+} */
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+  .horizontal-layout {
+    flex-direction: column; /* Susun elemen secara vertikal */
+  }
+
+  .layout-left,
+  .layout-right {
+    flex: none; /* Tidak ada pembagian lebar */
+    width: 100%; /* Gunakan lebar penuh */
+    margin-bottom: 20px; /* Jarak antar elemen */
+  }
+}
+
+.btn_container {
+  display: flex !important;
+  gap: 10px !important; /* Memberi jarak antar tombol */
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.btn_container a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 200px !important; /* Ukuran tombol */
+  height: 40px !important;
+  border-radius: 8px !important; /* Membuat sudut membulat */
+  text-decoration: none !important; /* Menghilangkan underline */
+  color: #fff !important; /* Warna ikon */
+  background: linear-gradient(
+    135deg,
+    #2ea56f,
+    #3ec97d
+  ) !important; /* Gradien warna hijau */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important; /* Bayangan */
+  transition: transform 0.2s ease !important;
+  box-shadow: 0.2s ease !important; /* Efek transisi */
+}
+
+.btn_container a:hover {
+  transform: scale(1.1) !important; /* Sedikit membesar saat hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3) !important; /* Bayangan lebih besar saat hover */
+  background: linear-gradient(
+    135deg,
+    #3ec97d,
+    #4de690
+  ) !important; /* Perubahan warna saat hover */
+}
+
+.btn_container a:active {
+  transform: scale(1) !important; /* Tidak membesar saat klik */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important; /* Bayangan sedikit mengecil */
+}
+
+.btn_container i {
+  font-size: 18px !important; /* Ukuran ikon */
+}
+
+

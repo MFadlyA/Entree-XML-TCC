@@ -1,0 +1,35 @@
+table th {
+  width: 20%; /* Menjadikan kolom <th> lebih lebar */
+  text-align: left;
+}
+table td {
+  width: 80%;
+}
+
+/* MODAL FOOTER */
+
+.modal-footer .btn-submit {
+  background-color: #269659 !important; /* Hijau untuk tombol Kirim */
+  border-color: #269659 !important;
+  color: white !important;
+}
+
+.modal-footer .btn-submit:hover {
+  background-color: #21874f !important; /* Warna lebih gelap saat hover */
+  border-color: #21874f !important;
+}
+
+.modal-footer .btn-cancel {
+  background-color: #dc3545 !important; /* Merah untuk tombol Batal */
+  border-color: #dc3545 !important;
+  color: white !important;
+}
+
+.modal-footer .btn-cancel:hover {
+  background-color: #c12e3c !important; /* Warna lebih gelap saat hover */
+  border-color: #c12e3c !important;
+}
+
+.main_wrapper .container {
+  min-height: 65vh;
+}

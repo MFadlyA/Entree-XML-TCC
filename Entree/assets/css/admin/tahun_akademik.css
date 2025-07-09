@@ -1,0 +1,128 @@
+.main_wrapper .btn-tambah {
+  background-color: #2ea56f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main_wrapper .btn-tambah:hover {
+  background-color: #299363;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.main_wrapper .btn-tambah:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-success {
+  background-color: #e6ffee;
+  border: 1px solid #00cc66;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Heading untuk daftar file */
+#fileHeading {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2ea56f; /* Warna hijau lembut */
+  text-align: left;
+  border-bottom: 3px solid #2ea56f;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Daftar Tahun Akademik */
+#fileList {
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  text-align: left;
+  background: none; /* Warna abu-abu terang untuk elemen induk */
+}
+
+/* Item dalam daftar */
+#fileList li {
+  display: flex;
+  justify-content: space-between; /* Nama file di kiri, ikon di kanan */
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #333;
+  background: #ffffff; /* Warna putih untuk setiap elemen li */
+  margin-bottom: 20px; /* Tambahkan margin untuk pengujian */
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hilangkan border bawah pada item terakhir */
+#fileList li:last-child {
+  border-bottom: none;
+}
+
+/* Bagian teks (nama file dan ukuran) */
+#fileList li .file-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Ikon di sebelah kanan */
+#fileList li .icon-group {
+  display: flex;
+  gap: 15px; /* Jarak antar ikon */
+}
+
+#fileList li .icon-group i {
+  font-size: 1.3rem;
+  color: #2ea56f; /* Warna hijau untuk ikon */
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+/* Hover efek untuk item daftar */
+#fileList li:hover {
+  background-color: #e8f5e9; /* Hijau muda saat hover */
+  cursor: pointer;
+  transform: translateY(-2px); /* Efek naik saat hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek hover pada ikon */
+#fileList li .icon-group i:hover {
+  color: #1b7e4b; /* Warna hijau lebih gelap saat hover */
+  transform: scale(1.2); /* Perbesar ikon sedikit */
+}
+
+/* Ukuran file */
+#fileList li .file-info span {
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  #fileList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #fileList li .icon-group {
+    margin-top: 8px;
+    align-self: flex-end; /* Memastikan ikon berada di flex-end */
+  }
+}

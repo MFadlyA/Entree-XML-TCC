@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Global Style */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Main Wrapper */
+.main {
+  padding: 20px;
+}
+
+.main_wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Agar elemen turun jika tidak cukup ruang */
+  justify-content: space-between;
+  gap: 20px; /* Menambahkan jarak antar elemen */
+  padding: 30px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav_main_wrapper {
+  display: block;
+  width: 100%;
+}
+
+/* Card Style */
+.card {
+  flex: 1 1 calc(45% - 20px); /* Responsif: ukuran kartu otomatis menyesuaikan */
+  box-sizing: border-box;
+  transition: transform 0.2s, color 0.2s;
+  height: 320px;
+  max-width: 49%;
+  margin: 10px;
+  min-width: 280px; /* Ukuran minimum untuk tampilan kecil */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card-body p {
+  margin: 0;
+  padding: 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-footer a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Icon Style */
+.card-icon i,
+.card-footer .detail-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.card-icon i:hover,
+.card-footer .detail-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Table Style */
+.styled-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background-color: #fefefe;
+  vertical-align: middle;
+}
+
+/* Filter Tahun */
+
+.filter-tahun {
+  width: 60% !important;
+  margin-right: 10px;
+}
+
+.nav_main_wrapper .btn {
+  width: 200px; /* Lebar tombol tetap pada layar besar */
+  text-align: center;
+  margin-left: 10px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+  .main_wrapper {
+    justify-content: center; /* Menyusun kartu di tengah pada layar tablet */
+    gap: 15px;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Kartu mengambil lebar penuh pada layar kecil */
+    max-width: none;
+    max-height: none;
+    margin-top: 0px !important;
+  }
+
+  .nav_main_wrapper .dropdown {
+    width: 100%;
+  }
+
+  .nav_main_wrapper .filter-tahun,
+  .nav_main_wrapper .d-flex,
+  .nav_main_wrapper .dropdown .btn {
+    margin: 0;
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Kartu mengambil lebar penuh pada layar kecil */
+  }
+
+  .card h5 {
+    font-size: 18px;
+  }
+
+  .card-footer .detail-icon {
+    font-size: 22px;
+  }
+
+  .card-footer .btn {
+    font-size: 14px;
+  }
+
+  .styled-table {
+    width: 100%;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  .styled-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main_wrapper {
+    padding: 5px; /* Mengurangi padding untuk layar ponsel */
+  }
+
+  .card {
+    flex: 1 1 100%;
+    margin: 5px 0; /* Jarak antar kartu lebih kecil */
+  }
+
+  .card h5 {
+    font-size: 16px;
+  }
+}
+
+.card-mentor {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: calc(50% - 40px);
+  box-sizing: border-box;
+  float: left;
+}
+
+.nama-mentor {
+  min-height: 75px;
+}
+.card-mentor img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.card-mentor h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: black;
+}
+.card-mentor p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .card-mentor {
+    width: calc(
+      100% - 40px
+    ); /* Setiap card mengambil 50% lebar, dikurangi margin */
+  }
+}
+
+.klik {
+  display: flex;
+  flex-direction: column; /* Elemen diatur ke kolom */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  justify-content: center; /* Pusatkan elemen secara vertikal */
+  margin-top: 10px; /* Beri jarak antara teks dan ikon */
+}
+
+.klik .toggle-text {
+  cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
+  color: gray; /* Warna teks */
+  font-size: 10px; /* Ukuran font */
+  font-weight: 600; /* Ketebalan font */
+  text-decoration: underline; /* Garis bawah pada teks */
+  transition: color 0.3s ease-in-out; /* Transisi warna teks */
+  margin: 0;
+  padding: 0;
+}
+
+.klik i {
+  color: gray;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toast {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  opacity: 1;
+}

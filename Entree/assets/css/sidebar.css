@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  background-color: #fafbfe;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all 0.25s ease-in-out;
+  background-color: #2ea56f;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+.toggle-btn,
+.toggle-btn2 {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i,
+.toggle-btn2 i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* versi image */
+.sidebar-logo img {
+  width: 50%;
+  height: 50%;
+}
+
+#sidebar:not(.expand) .sidebar-logo .logo-kanan,
+#sidebar:not(.expand) a.sidebar-link span,
+#sidebar:not(.expand) .sidebar-header h1 {
+  display: none;
+}
+
+#sidebar.expand .logo-kanan {
+  display: block;
+  width: 70%;
+  height: 70%;
+}
+
+#sidebar.expand .logo-kiri {
+  width: 20%;
+  height: 25%;
+}
+
+.sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+
+.d-flex-custom-sidebar {
+  display: flex;
+}
+
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  color: #fff;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 4px solid white;
+}
+
+.sidebar-item.active a {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 4px solid white;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #2ea56f;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all 0.2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+
+.sign-out {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar-nav hr {
+  border: 2px solid white;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.sidebar-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 1rem 1.625rem;
+  margin: 0;
+}
+
+.main_wrapper {
+  width: 100%;
+  height: 85vh;
+  background-color: #f4f4f9;
+  box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.toggle-btn2 {
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  z-index: 1001;
+  background-color: #2ea56f;
+  color: #2ea56f;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  #sidebar {
+    display: none;
+    position: fixed;
+    height: 100%;
+  }
+
+  .toggle-btn {
+    visibility: hidden;
+  }
+
+  .toggle-btn2 {
+    top: 15px;
+    display: block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  #sidebar.expand .sidebar-logo {
+    margin-top: 15px;
+  }
+}
+
+/* scroll bar */
+/* Mengatur scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Warna thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Warna thumb saat hover */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #e74c3c; /* Warna hover lebih menarik */
+}
+
+.main_wrapper .btn-hijau {
+  background-color: #2ea56f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main_wrapper .btn-hijau:hover {
+  background-color: #299363;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.main_wrapper .btn-hijau:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* tooltip */
+.tooltip-inner {
+  background-color: #2ea56f !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* .tooltip-arrow::before {
+  background-color: #3498db !important;
+} */

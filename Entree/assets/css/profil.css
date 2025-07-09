@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fafbfe;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+
+.main_wrapper {
+  width: 100%;
+  height: 85vh;
+  background-color: #f0f0f0;
+  box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Profil Styling */
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  /* margin-top: 30px; */
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-item {
+  flex: 1 1 calc(50% - 20px);
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-item h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.profile-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.edit-btn {
+  position: absolute; /* Posisi tombol diatur relatif ke induk */
+  top: 10px; /* Jarak dari atas */
+  right: 10px; /* Jarak dari kanan */
+  font-size: 25px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  transition: transform 0.3s ease; /* Animasi ikon */
+}
+
+.edit-btn:hover {
+  transform: scale(1.1); /* Ikon membesar saat hover */
+}
+
+/* Styling untuk tombol aksi */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.action-buttons button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-buttons .save-btn {
+  background-color: #2ea56f;
+  color: white;
+  border: 1px solid #ddd;
+}
+
+.action-buttons .save-btn:hover {
+  transform: scale(1.05);
+}
+
+.action-buttons .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #ddd;
+}
+
+.action-buttons .cancel-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Footer Buttons */
+.modal-footer .btn-submit {
+  background-color: #269659;
+  border-color: #269659;
+  color: white;
+}
+
+.modal-footer .btn-submit:hover {
+  background-color: #21874f;
+  border-color: #21874f;
+}
+
+.modal-footer .btn-cancel {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.modal-footer .btn-cancel:hover {
+  background-color: #c12e3c;
+  border-color: #c12e3c;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  input[type="text"],
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .action-buttons button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+

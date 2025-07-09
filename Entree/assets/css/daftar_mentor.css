@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: calc(33% - 40px);
+  box-sizing: border-box;
+  float: left;
+}
+.card img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: black;
+}
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsiveness */
+@media (max-width: 1000px) {
+  .card {
+    width: calc(
+      50% - 40px
+    ); /* Setiap card mengambil 50% lebar, dikurangi margin */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(
+      100% - 40px
+    ); /* Setiap card mengambil 50% lebar, dikurangi margin */
+  }
+}
+
+.klik {
+  display: flex;
+  flex-direction: column; /* Elemen diatur ke kolom */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  justify-content: center; /* Pusatkan elemen secara vertikal */
+  margin-top: 10px; /* Beri jarak antara teks dan ikon */
+}
+
+.klik .toggle-text {
+  cursor: pointer; /* Ubah kursor menjadi pointer saat hover */
+  color: gray; /* Warna teks */
+  font-size: 10px; /* Ukuran font */
+  font-weight: 600; /* Ketebalan font */
+  text-decoration: underline; /* Garis bawah pada teks */
+  transition: color 0.3s ease-in-out; /* Transisi warna teks */
+  margin: 0;
+  padding: 0;
+}
+
+.klik i {
+  color: gray;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,105 @@
+RewriteEngine On
+DirectoryIndex index.php index.html
+Options -Indexes
+RewriteBase /Entree/
+
+# Menghapus ekstensi .php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+# Aturan URL rewrite
+RewriteRule ^login$ auth/login/loginform.php [L]
+RewriteRule ^dashboard$ components/pages/startdashboard/dashboardawal.php [L]
+
+#mahasiswa
+RewriteRule ^mahasiswa/dashboard$ components/pages/mahasiswa/pagemahasiswa.php [L]
+RewriteRule ^mahasiswa/profil$ components/pages/mahasiswa/profil_mahasiswa.php [L]
+RewriteRule ^mahasiswa/materi_kewirausahaan$ components/pages/mahasiswa/materikewirausahaan_mahasiswa.php [L]
+RewriteRule ^mahasiswa/detail_materi$ components/pages/mahasiswa/detail_materi_kewirausahaan.php [L]
+RewriteRule ^mahasiswa/daftar_mentor$ components/pages/mahasiswa/daftar_mentor_mahasiswa.php [L]
+RewriteRule ^mahasiswa/kelompok_bisnis$ components/pages/mahasiswa/kelompok_bisnis_mahasiswa.php [L]
+RewriteRule ^mahasiswa/detail_kelompok_bisnis$ components/pages/mahasiswa/detail_kelompok_bisnis.php [L]
+RewriteRule ^mahasiswa/proposal$ components/pages/mahasiswa/proposal_bisnis_mahasiswa.php [L]
+RewriteRule ^mahasiswa/detail_proposal$ components/pages/mahasiswa/detail_proposal_bisnis.php [L]
+RewriteRule ^mahasiswa/delete_kelompok$ components/pages/mahasiswa/delete_kelompok.php [L]
+RewriteRule ^mahasiswa/proses_kelompok_bisnis$ components/pages/mahasiswa/proses_kelompok_bisnis.php [L]
+RewriteRule ^mahasiswa/proses_proposal$ components/pages/mahasiswa/proses_proposal.php [L]
+RewriteRule ^mahasiswa/hapus_proposal$ components/pages/mahasiswa/hapus_proposal.php [L]
+RewriteRule ^mahasiswa/laporan_bisnis$ components/pages/mahasiswa/laporan_bisnis_mahasiswa.php [L]
+RewriteRule ^mahasiswa/jadwal_bimbingan$ components/pages/mahasiswa/jadwal_bimbingan_mahasiswa.php [L]
+RewriteRule ^mahasiswa/detail_laporan$ components/pages/mahasiswa/detail_laporan_bisnis.php [L]
+RewriteRule ^mahasiswa/hapus_laporan$ components/pages/mahasiswa/hapus_laporan.php [L]
+RewriteRule ^mahasiswa/proses_laporan$ components/pages/mahasiswa/proses_laporan.php [L]
+RewriteRule ^mahasiswa/detail_jadwal$ components/pages/mahasiswa/detail_jadwal_mahasiswa.php [L]
+RewriteRule ^lengkapi_data_mahasiswa$ components/pages/mahasiswa/lengkapi_data_mahasiswa.php [L]
+RewriteRule ^mahasiswa/edit_laporan$ components/pages/mahasiswa/edit_laporan.php [L]
+RewriteRule ^mahasiswa/submit_action$ components/pages/mahasiswa/submit_action.php [L]
+
+#mentorbisnis
+RewriteRule ^mentor/dashboard$ components/pages/mentorbisnis/pagementor.php [L]
+RewriteRule ^mentor/profil$ components/pages/mentorbisnis/profil_mentor.php [L]
+RewriteRule ^mentor/materi_kewirausahaan$ components/pages/mentorbisnis/materikewirausahaan_mentor.php [L]
+RewriteRule ^mentor/daftar_mentor$ components/pages/mentorbisnis/daftar_mentor_mentor.php [L]
+RewriteRule ^mentor/jadwal_bimbingan$ components/pages/mentorbisnis/jadwal_bimbingan_mentor.php [L]
+RewriteRule ^mentor/daftar_kelompok_bisnis$ components/pages/mentorbisnis/daftar_kelompok_bisnis_mentor.php [L]
+RewriteRule ^mentor/kelola_proposal$ components/pages/mentorbisnis/kelola_proposal_mentorbisnis.php [L]
+RewriteRule ^mentor/detail_materi_kewirausahaan$ components/pages/mentorbisnis/detail_materi_kewirausahaan.php [L]
+RewriteRule ^mentor/detail_kelompok$ components/pages/mentorbisnis/detail_kelompok.php [L]
+RewriteRule ^mentor/update_kelompok_status$ components/pages/mentorbisnis/update_kelompok_status.php [L]
+RewriteRule ^mentor/proposal_bisnis$ components/pages/mentorbisnis/proposal_bisnis_mentor.php [L]
+RewriteRule ^mentor/laporan_bisnis$ components/pages/mentorbisnis/laporan_bisnis_mentor.php [L]
+RewriteRule ^mentor/detail_jadwal$ components/pages/mentorbisnis/detail_jadwal_mentor.php [L]
+RewriteRule ^mentor/detail_proposal$ components/pages/mentorbisnis/detail_proposal_bisnis_mentor.php [L]
+RewriteRule ^mentor/detail_laporan$ components/pages/mentorbisnis/detail_laporan_bisnis_mentor.php [L]
+RewriteRule ^mentor/update_proposal_status$ components/pages/mentorbisnis/update_proposal_status.php [L]
+RewriteRule ^mentor/submit_feedback$ components/pages/mentorbisnis/submit_feedback.php [L]
+RewriteRule ^mentor/submit_feedback_laporan$ components/pages/mentorbisnis/submit_feedback_laporan.php [L]
+RewriteRule ^mentor/submit_alternative_schedule$ components/pages/mentorbisnis/submit_alternative_schedule.php [L]
+RewriteRule ^mentor/detail_jadwal$ components/pages/mentorbisnis/detail_jadwal_mentor.php [L]
+RewriteRule ^mentor/submit_feedback_jadwal$ components/pages/mentorbisnis/submit_feedback_jadwal.php [L]
+RewriteRule ^mentor/submit_action$ components/pages/mentorbisnis/submit_action.php [L]
+RewriteRule ^lengkapi_data_mentor$ components/pages/mentorbisnis/lengkapi_data_mentor.php [L]
+RewriteRule ^mentor/update_kelompok_bisnis$ components/pages/mentorbisnis/update_kelompok_bisnis.php [L]
+RewriteRule ^mentor/keluarkan_kelompok$ components/pages/mentorbisnis/keluarkan_kelompok.php [L]
+
+#admin
+RewriteRule ^admin/dashboard$ components/pages/admin/pageadmin.php [L]
+RewriteRule ^admin/profil$ components/pages/admin/profil_admin.php [L]
+RewriteRule ^admin/materi_kewirausahaan$ components/pages/admin/materikewirausahaan_admin.php [L]
+RewriteRule ^admin/detail_materi$ components/pages/admin/detail_materi_kewirausahaan.php [L]
+RewriteRule ^admin/edit_materi$ components/pages/admin/edit_materi.php [L]
+RewriteRule ^admin/delete_materi$ components/pages/admin/delete_materi.php [L]
+RewriteRule ^admin/daftar_mentor$ components/pages/admin/daftar_mentor_admin.php [L]
+RewriteRule ^admin/update_role$ components/pages/admin/update_role.php [L]
+RewriteRule ^admin/daftar_kelompok_bisnis$ components/pages/admin/daftar_kelompok_bisnis_admin.php [L]
+RewriteRule ^admin/detail_kelompok$ components/pages/admin/detail_kelompok.php [L]
+RewriteRule ^admin/update_status_inkubasi$ components/pages/admin/update_status_inkubasi.php [L]
+RewriteRule ^admin/proposal_bisnis$ components/pages/admin/proposal_bisnis_admin.php [L]
+RewriteRule ^admin/laporan_bisnis$ components/pages/admin/laporan_bisnis_admin.php [L]
+RewriteRule ^admin/detail_jadwal$ components/pages/admin/detail_jadwal_admin.php [L]
+RewriteRule ^admin/get_status_inkubasi$ components/pages/admin/get_status_inkubasi.php [L]
+RewriteRule ^admin/detail_proposal_bisnis$ components/pages/admin/detail_proposal_bisnis_admin.php [L]
+RewriteRule ^admin/detail_laporan_bisnis$ components/pages/admin/detail_laporan_bisnis_admin.php [L]
+RewriteRule ^admin/daftar_penuh_proposal$ components/pages/admin/daftar_penuh_proposal.php [L]
+RewriteRule ^admin/tahun_akademik$ components/pages/admin/tahun_akademik.php [L]
+RewriteRule ^admin/tambah_tahun_akademik$ components/pages/admin/tambah_tahun_akademik.php [L]
+RewriteRule ^admin/hapus_tahun_akademik$ components/pages/admin/hapus_tahun_akademik.php [L]
+RewriteRule ^admin/process_change_password$ components/pages/admin/process_change_password.php [L]
+RewriteRule ^admin/update_kelompok_bisnis$ components/pages/admin/update_kelompok_bisnis.php [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

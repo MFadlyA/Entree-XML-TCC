@@ -1,0 +1,334 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fb;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.left {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.left img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.right {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.title-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-edit h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.edit-btn {
+  font-size: 25px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.edit-btn:hover {
+  transform: scale(1.1);
+}
+
+.category,
+.sdg,
+.members,
+.tutor {
+  margin-top: 20px;
+}
+
+.category p,
+.sdg p,
+.members p,
+.tutor p {
+  font-size: 16px;
+  color: #555;
+}
+
+.category strong,
+.sdg strong,
+.members strong,
+.tutor strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.members p,
+.tutor p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.members p i,
+.tutor p i {
+  color: #007bff;
+}
+
+.bottom {
+  margin-top: 20px;
+}
+
+.bottom p {
+  font-size: 16px;
+  color: #555;
+}
+
+.bottom p strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling untuk input teks dan textarea */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Styling untuk tombol aksi */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.action-buttons button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-buttons .save-btn {
+  background-color: #2ea56f;
+  color: white;
+}
+
+.action-buttons .save-btn:hover {
+  transform: scale(1.05);
+}
+
+.action-buttons .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #ddd;
+}
+
+.action-buttons .cancel-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Card Styling */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modal Footer Buttons */
+.modal-footer .btn-submit {
+  background-color: #269659;
+  border-color: #269659;
+  color: white;
+}
+
+.modal-footer .btn-submit:hover {
+  background-color: #21874f;
+  border-color: #21874f;
+}
+
+.modal-footer .btn-cancel {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.modal-footer .btn-cancel:hover {
+  background-color: #c12e3c;
+  border-color: #c12e3c;
+}
+
+/* Responsiveness */
+@media (max-width: 978px) {
+  input[type="text"],
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .action-buttons button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .mentor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-mentor {
+    margin: none;
+    background-color: #007bff;
+  }
+
+  .title-edit {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 120px;
+  }
+
+  .card h5 {
+    font-size: 14px;
+  }
+}
+
+.card-mentor {
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 95%;
+  box-sizing: border-box;
+}
+.card-mentor img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.card-mentor h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.card-mentor p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.table-container {
+  width: 100% !important;
+  table-layout: auto !important;
+  overflow-x: auto !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .card-mentor {
+    margin: 10px;
+  }
+}

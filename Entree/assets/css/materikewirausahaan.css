@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* admin */
+/* FORM */
+
+.main_wrapper .btn-hijau {
+  background-color: #2ea56f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main_wrapper .btn-hijau:hover {
+  background-color: #299363;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.main_wrapper .btn-hijau:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-success {
+  background-color: #e6ffee;
+  border: 1px solid #00cc66;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.modal-form {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-form .modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  height: 80%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .modal .modal-content {
+    width: 90%; /* Lebar form modal */
+  }
+}
+
+.modal-form .modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="file"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form select {
+  appearance: none; /* Menghilangkan tanda panah default di sebagian besar browser */
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KPHBhdGggZmlsbD0iI0NDQyIgZD0iTTIgNGw0IDQgNCA0VjBsLTQtNHoiLz4KPC9zdmc+"); /* Icon untuk panah dropdown */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="file"]:focus,
+form textarea:focus {
+  border-color: #2ea56f;
+  outline: none;
+}
+
+.modal-form .modal h2 {
+  margin-top: 25px;
+}
+
+/* mentor dan mahasiswa */
+/* Tampilan materi kewirausahaan Mahasiswa*/
+.container_materi {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  padding-right: 25px;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  height: 150px;
+}
+.judul_materi {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.deskripsi_materi {
+  font-size: 16px;
+  max-height: fit-content;
+  color: #666;
+  padding-right: 20px;
+}
+
+.btn_container {
+  margin-top: 20px;
+}
+
+.btn_container .btn-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.3s ease; /* Animasi ikon */
+}
+
+.icon:hover .btn-icon {
+  transform: scale(1.2); /* Ikon membesar saat hover */
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal Heading */
+.modal-detail .modal-content h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Modal Paragraphs */
+#detailJudul {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+#detailDeskripsi {
+  font-size: 16px;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  height: 130px;
+  overflow-y: auto;
+}
+
+/* Preview File */
+#filePreview {
+  max-height: 300px;
+  overflow: auto;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk file */
+
+.file {
+  display: inline-flex; /* Menjadikan teks dan ikon sejajar */
+  align-items: center;
+  justify-content: center;
+  background-color: #2ea56f; /* Warna dasar biru */
+  color: white; /* Warna teks putih */
+  text-decoration: none; /* Hilangkan garis bawah */
+  padding: 10px 20px; /* Padding dalam tombol */
+  border-radius: 8px; /* Tepi membulat */
+  font-size: 16px; /* Ukuran font */
+  font-weight: bold; /* Teks tebal */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efek animasi */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+  width: 49%;
+}
+
+.file:hover {
+  background-color: #278b5e; /* Warna saat hover */
+  transform: translateY(-2px); /* Tombol naik sedikit */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+}
+
+.file:active {
+  transform: translateY(1px); /* Efek saat ditekan */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Bayangan mengecil */
+}
+
+.file span {
+  margin-right: 8px; /* Jarak antara teks dan ikon */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+  .modal-content h2 {
+    font-size: 24px;
+  }
+  #detailJudul {
+    font-size: 18px;
+  }
+  #detailDeskripsi {
+    font-size: 14px;
+  }
+}
+
+/* Container Materi */
+.container_materi {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Warna latar lembut */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.container_materi:hover {
+  transform: translateY(-5px); /* Gerakan hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih intens */
+}
+
+/* Judul Materi */
+.judul_materi {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Potong teks panjang */
+  white-space: nowrap;
+}
+
+/* Deskripsi Materi */
+.deskripsi_materi {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #7f8c8d;
+  line-height: 1.5;
+  max-height: 50px; /* Batasi tinggi deskripsi */
+  overflow: hidden; /* Sembunyikan teks berlebih */
+  text-overflow: ellipsis; /* Tambahkan "..." jika teks panjang */
+}
+
+.detail-icon {
+  display: flex;
+  justify-content: end;
+  margin-left: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+  color: #000;
+}
+
+.detail-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Tambahan untuk Transisi Modal */
+.modal-detail {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Latar belakang gelap */
+  overflow-y: auto; /* Tambahkan scroll jika konten tinggi */
+  animation: fadeInModal 0.3s ease; /* Animasi muncul */
+}
+
+/* Modal Content */
+.modal-detail .modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  height: 90vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+/* Animasi Fade-in */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Jarak antar kartu */
+  justify-content: center; /* Posisikan kartu di tengah */
+  align-items: stretch; /* Pastikan kartu memiliki tinggi seragam */
+}
+
+.card {
+  flex: 1 1 calc(25% - 16px); /* Lebar kartu 25% dari container */
+  width: 300px; /* Lebar maksimal kartu */
+  height: 200px; /* Lebar maksimal kartu */
+  margin: 8px; /* Jarak antar kartu */
+  display: flex;
+  flex-direction: column; /* Atur konten dalam kartu secara vertikal */
+  background-color: #f9f9f9; /* Warna latar belakang kartu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  border-radius: 8px; /* Membuat sudut kartu melengkung */
+  overflow: hidden; /* Potong konten yang keluar dari kartu */
+  background-color: #00cc66;
+  height: 200px; /* Lebar maksimal kartu */
+  transition: transform 0.2s, color 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-weight: bold; /* Buat teks judul bold */
+  font-size: 1.2rem; /* Ukuran font lebih besar */
+  margin-bottom: 8px; /* Jarak bawah judul */
+}
+
+.card-text {
+  flex-grow: 1; /* Biarkan teks mengisi ruang kosong */
+  margin-bottom: 16px; /* Jarak antara teks dan bagian bawah */
+  color: #555; /* Warna teks untuk kontras */
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  padding: 16px; /* Spasi di dalam body */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Rapatkan konten dalam body */
+  flex-grow: 1; /* Pastikan tinggi body fleksibel */
+  height: 130px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card-img-top {
+  max-height: 200px; /* Batasi tinggi gambar */
+  object-fit: cover; /* Potong gambar agar sesuai dengan area */
+}
+
+/* CSS FITUR CARI MATERI */
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.d-flex {
+  width: 30%;
+}
+
+.admin {
+  width: 95%;
+}
+
+.right-admin {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.right-admin .input-admin {
+  width: 30%;
+}
+
+.input-group input {
+  width: 70%;
+}
+
+.input-group button {
+  width: 30%;
+}
+
+.right-admin button {
+  max-width: 20%;
+}
+
+/* Responsivitas */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(33.33% - 16px); /* Tiga kartu per baris */
+  }
+  .right-admin .input-admin {
+    width: 70%;
+  }
+  .right-admin button {
+    max-width: none;
+  }
+  .d-flex {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 16px); /* Dua kartu per baris */
+  }
+
+  .right-admin .input-admin {
+    width: 90%;
+  }
+  .d-flex {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 1 1 calc(100% - 16px); /* Satu kartu per baris */
+    max-width: 100%; /* Lebar penuh */
+  }
+
+  .card-title {
+    font-size: 1rem; /* Ukuran font lebih kecil */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Ukuran font lebih kecil */
+  }
+
+  .d-flex,
+  .right-admin {
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+  }
+
+  .input-group input,
+  .input-group button,
+  .right-admin .input-admin {
+    width: 100%;
+  }
+}
+
+.icon-container {
+  height: 150px; /* Tinggi div untuk ikon */
+  display: flex;
+  justify-content: center; /* Posisikan ikon di tengah secara horizontal */
+  align-items: center; /* Posisikan ikon di tengah secara vertikal */
+  background-color: #f5f5f5; /* Opsional: warna latar belakang */
+  border-bottom: 1px solid #ddd; /* Opsional: garis pemisah dengan body */
+}
+
+.icon {
+  max-width: 50px; /* Batasi ukuran ikon */
+  max-height: 50px; /* Pastikan ikon tidak terlalu besar */
+  object-fit: contain; /* Sesuaikan ukuran tanpa memotong */
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
